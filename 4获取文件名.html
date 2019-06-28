@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速获取文件名</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var name='/www/web/lampam/index.php';
+
+    //lastIndexOf获取某个字符最后一次出现的位置
+    var fileNum=name.lastIndexOf('/');
+    //substr截取字符串，前一个参数代表开始截取的位置，后一个代表截取的字符数量
+    //获取文件名
+    console.log(name.substr(fileNum+1));
+    //获取目录名
+    console.log(name.substr(0,fileNum));
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组排序</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //一般是数字排序
+    var array=[100,15,46,23,58,691];
+
+    //sort排序需要一个回调函数，即一个函数的参数（本例如show）是另一个函数的函数名
+    array.sort(show);
+    function show(i,j) {
+        //升序
+        return i-j;
+        //降序
+        //return j-i;
+    }
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>除去左右空格</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    <!--利用trim函数去除字符左右两边的空格-->
+    var name='   jackson yee  ';
+    function trim(str) {
+        //正则表达式代表若遇到空格则用空替代，即删除
+        return str.replace(/(^\s*)|(\s*$)/g,'');
+    }
+    //因为肉眼难以判断，所以通过字符长度来判断空格是否删除
+    console.log(trim(name).length);
+
+</script>

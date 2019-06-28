@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机切换图片</title>
+</head>
+<body>
+    <img src="" alt="图片丢失了" id="imgs"/>
+</body>
+</html>
+<script>
+    function changeImg() {
+        var arr=['a.jpg','b.jpg','c.jpg','d.jpg'];
+        //随机输出0-4，math.floor是向下取整即4.6取4
+        var key=Math.floor(Math.random()*arr.length);
+        //通过id获取到img标签
+        var imgobj=document.getElementById('imgs');
+        imgobj.src='images/'+arr[key];
+    }
+    setInterval(changeImg,1000);
+
+</script>

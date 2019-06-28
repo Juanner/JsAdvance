@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>秒表</title>
+    <style>
+        #mytime{
+            background-color: darkblue;
+            color:white;
+            text-align: center;
+            width: 360px;
+            border-radius:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="mytime">时间</h1>
+</body>
+</html>
+<script>
+    setInterval(function () {
+        var date=new Date();
+        var year=date.getFullYear();
+        var month=date.getMonth()+1;
+        var day=date.getDate();
+        var hour=date.getHours();
+        var minute=date.getMinutes();
+        var second=date.getSeconds();
+
+        var time=year+" "+month+" "+day+" "+hour+":"+minute+":"+second;
+        //通过id获取HTML元素h1
+        var h1obj=document.getElementById('mytime');
+        //通过innerHTML获取元素的内容，把time的值赋给它
+        h1obj.innerHTML=time;
+    },1000)
+
+</script>
+

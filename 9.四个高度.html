@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: yellow">
+<head>
+    <meta charset="UTF-8">
+    <title>与JS特性有关的四个高度</title>
+</head>
+<body style="background-color: teal">
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+</body>
+</html>
+<script>
+    // 文档的高,青绿色区域
+    var h1=document.body.clientHeight;
+    alert(h1);
+    //有效的高，可视区的高
+    var h2=document.documentElement.clientHeight;
+    alert(h2);
+    //屏幕总高,可滚动区域的总高度，黄色区域
+    var h3=document.documentElement.scrollHeight;
+    alert(h3);
+
+   //将页面已滚动的高度赋值给title
+    window.onscroll=function () {
+        //页面滚动的高,代表往上滚了多高，即已滚动的高度
+        var h4=document.documentElement.scrollTop;
+        document.title=h4;
+    }
+</script>

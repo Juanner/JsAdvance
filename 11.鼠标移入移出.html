@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移入移出</title>
+</head>
+<body>
+    <h1 id="hid">aaaaaaaaaaa</h1>
+    <h1>bbbbbbbbbbb</h1>
+    <h1>ccccccccccc</h1>
+    <h1>ddddddddddd</h1>
+    <h1>eeeeeeeeeee</h1>
+</body>
+</html>
+<script>
+
+    //获取第一个h1
+    var hobj=document.getElementById('hid');
+    //鼠标移入
+    hobj.onmouseenter=function() {
+        this.style.background='#ddd';
+    }
+    //鼠标移出
+    hobj.onmouseleave=function() {
+        this.style.background='#fff';
+    }
+
+    //给每一个h1加相同属性
+    var hobjs=document.getElementsByTagName('h1');
+    //加事件只能给一个元素加，不同同时给一堆
+    //获取一堆可认为通过数组下标获取不同对象
+    for (i=0;i<hobjs.length;i++){
+        //打印每个h1中的内容
+        // alert(hobjs[i].innerHTML);
+        hobjs[i].onmouseenter=function() {
+           /*
+            此处的this不能用hobjs[i]代替，会报错hobjs[i] is not undefined
+            分析原因：
+            alert(i);此结果一直为5
+            所以hobjs[i]其实是hobjs[5]，而其不存在，已跳出循环了，因此报错
+            */
+            this.style.background='#ddd';
+        }
+        hobjs[i].onmouseleave=function() {
+            this.style.background='#fff';
+        }
+    }
+</script>

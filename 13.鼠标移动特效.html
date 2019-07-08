@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移动特效</title>
+    <style>
+        #imgid{
+            position: absolute;
+            width: 40px;
+           display: none;
+        }
+    </style>
+</head>
+<body>
+<img id="imgid" src="./images/a.jpg" alt="">
+</body>
+</html>
+<script>
+    imgobj=document.getElementById('imgid');
+    document.onmousemove=function (event) {
+        //获取鼠标x，y轴坐标
+        x=event.clientX;
+        y=event.clientY;
+        //将坐标放在title处显示
+        document.title=x+'-'+y;
+        //设置图片的位置和鼠标同
+        imgobj.style.left=x+'px';
+        imgobj.style.top=y+'px';
+        imgobj.style.display='inline-block';
+    }
+</script>

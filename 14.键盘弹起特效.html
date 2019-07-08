@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘弹起特效</title>
+</head>
+<body>
+    <p>请输入验证码：</p>
+    <p><input type="text" id="verify"></p>
+</body>
+</html>
+<script>
+    pobj=document.getElementById('verify');
+    //当键盘弹起时触发事件
+    pobj.onkeyup=function () {
+        //将输入的字母改为小写
+        this.value=this.value.toLowerCase();
+    }
+</script>

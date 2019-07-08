@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>给元素绑定事件</title>
+</head>
+<body>
+    <h1 id="hid">aaaaaaaaaaa</h1>
+    <!--第二种方法，老方法，不推荐使用-->
+    <h1 onclick="alert(1)">aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>aaaaaaaaaaa</h1>
+</body>
+</html>
+<script>
+    //第一种方法
+    var hobj=document.getElementById('hid');
+    hobj.onclick=function () {
+        alert(1);
+    }
+
+</script>

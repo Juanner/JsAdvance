@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单击换行数</title>
+</head>
+<body>
+    <h1>aaaaaaaaaaa</h1>
+    <h1>bbbbbbbbbbb</h1>
+    <h1>ccccccccccc</h1>
+    <h1>ddddddddddd</h1>
+    <h1>eeeeeeeeeee</h1>
+</body>
+</html>
+<script>
+    var hobjs=document.getElementsByTagName('h1');
+    for (i=0;i<hobjs.length;i++) {
+        //给h1加id属性，并赋值
+        hobjs[i].id=i+1;
+        hobjs[i].onclick=function() {
+            this.innerHTML=this.id;
+        }
+    }
+</script>
